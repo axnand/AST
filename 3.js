@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get references to the logo, text, and main content elements
     var logo = document.getElementById("logo");
     var text = document.getElementById("text");
-    var mainContent = document.getElementById("mainContent");
+
 
     // Set initial state for the logo and text
     logo.style.opacity = 1;
@@ -27,10 +27,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }, 100);
 
-    // Display the main content after the animation
-    setTimeout(function () {
-        logo.style.display = "";
-        mainContent.style.display = "block";
-    }, 4100); // Adjust the time according to your animation duration
-});
 
+});
