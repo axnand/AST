@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gabarito:wght@500&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Your Website</title>
+    <style>
+    body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.logo-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #0e0e10; /* Set a background color for better visibility */
+}
+
+.logo {
+    width: 350px; /* Adjust the size of your logo */
+    height: 200px;
+    transition: transform 2s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.text,.get-started-button {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(300px);
+    transition: background-color 2s ease, transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+
+.get-started-button {
+    border: 5em;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+
+    background: rgb(238,212,94);
+    background: linear-gradient(65deg, rgba(238,212,94,1) 16%, rgba(45,100,158,1) 89%);
+    padding: 0.7em 2em;
+    border-radius: 65px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+    -webkit-transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s;
+    color: rgb(14, 13, 13);
+    
+  }
+  
+
+  
+  .get-started-button:after {
+    content: "";
+    border-radius: 18px;
+    position: absolute;
+    margin: 4px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    
+    
+   
+  }
+  
+  .get-started-button:hover {
+    transition: all 2s;
+    box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+  }
+  
+  .get-started-button:hover .text {
+    background: #0e0e10;
+
+  }
+ 
+  .get-started-button {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(300px);
+    transition:  transform 2s ease-in-out, opacity 2s ease-in-out;}
+
+
+
+
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.ast{
+    background: rgb(238,212,94);
+    background: linear-gradient(65deg, rgba(238,212,94,1) 16%, rgba(45,100,158,1) 89%);
+     -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text;
+     font-family: 'Bebas Neue', sans-serif;
+     font-size: 5rem;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Logo and Text Section -->
+    <div class="logo-text-container">
+        <img src="ast.png" alt="Your Logo" class="logo" id="logo">
+        <div class="text" id="text"><h1 class="ast">Apka Soft Tech</h1></div>
+        <button  onclick="window.location.href = 'tbc.html';" class="get-started-button" id="getStartedButton">Get Started</button>
+    </div>
+
+
+    <script >document.addEventListener("DOMContentLoaded", function () {
+    // Get references to the logo, text, and main content elements
+    var logo = document.getElementById("logo");
+    var text = document.getElementById("text");
+
+
+    // Set initial state for the logo and text
+    logo.style.opacity = 1;
+    logo.style.transform = "translateY(0)";
+    text.style.opacity = 0;
+    text.style.transform = "translateY(300px)";
+    getStartedButton.style.opacity = 0;
+    getStartedButton.style.transform = "translateY(300px)";
+
+    // Introduce a slight delay before applying the transition
+    setTimeout(function () {
+        logo.style.animation = "rotateLogo 2s linear";
+        // Move the logo up and fade out over 4 seconds with a smooth upward translation
+        logo.style.transform = "translateY(-400px)";
+        logo.style.opacity = 0;
+
+        // Show and animate the text
+        text.style.transform = "translateY(0)";
+        text.style.opacity = 1;
+        getStartedButton.style.transform = "translateY(100px)";
+        getStartedButton.style.opacity = 1;
+
+    }, 100);
+
+
+});
+
+</script>
+</body>
+</html>
