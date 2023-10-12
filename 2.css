@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.logo-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #131F5B; /* Set a background color for better visibility */
+}
+
+.logo {
+    width: 350px; /* Adjust the size of your logo */
+    height: 200px;
+    transition: transform 2s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.text,.get-started-button {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(300px);
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+
+.get-started-button {
+    border: 5em;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    
+
+    background: rgb(238,212,94);
+    background: linear-gradient(65deg, rgba(238,212,94,1) 16%, rgba(45,100,158,1) 89%);
+    padding: 0.7em 2em;
+    border-radius: 65px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+    -webkit-transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s;
+    color: white;
+  }
+  
+  .get-started-button .text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+  }
+  
+  .get-started-button:after {
+    content: "";
+    border-radius: 18px;
+    position: absolute;
+    margin: 4px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+   
+  }
+  
+  .get-started-button:hover {
+    background: #0e0e10;
+    box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+  }
+  
+  .get-started-button:hover .text {
+    background: #0e0e10;
+  }
+  .get-started-button {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(300px);
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out;}
+
+
+.main-content {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.ast{
+    background: rgb(238,212,94);
+    background: linear-gradient(65deg, rgba(238,212,94,1) 16%, rgba(45,100,158,1) 89%);
+     -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text;
+     font-family: 'Bebas Neue', sans-serif;
+     font-size: 5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo-text-container {
+        height: auto;
+        padding: 20px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .text,
+    .get-started-button {
+        font-size: 14px;
+    }
+
+    .get-started-button {
+        padding: 8px 16px;
+    }
+}
